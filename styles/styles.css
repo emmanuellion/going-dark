@@ -100,13 +100,13 @@ main{
     padding: 10px;
 }
 
-#phrase{
+.phrase{
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-#phrase p{
-    color: transparent;
+.phrase p{
+   color: transparent;
     font-size: 130%;
     width: 40vw;
     margin: 0 auto;

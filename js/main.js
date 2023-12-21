@@ -2,8 +2,10 @@ window.addEventListener('load', () => {
     document.querySelectorAll('.card').forEach(el => {
         el.style.transform = 'translateY(0)';
     });
-    document.querySelector('#p').style.transform = 'translateY(0)';
-    document.querySelector('#p').style.color = "white";
+    document.querySelectorAll('.p').forEach(el => {
+        el.style.transform = 'translateY(0)';
+        el.style.color = "white";
+    });
 });
 
 document.querySelectorAll('.card').forEach(el => {
@@ -27,3 +29,9 @@ document.querySelectorAll('.card').forEach(el => {
 document.querySelector('#home').addEventListener('click', () => {
     window.location.href = 'index.html';
 });
+try{
+    fetch("https://catfact.ninja/fact").then(response => response.json()).
+    then(data => {document.querySelector('#cat').innerHTML = `Random fact about cats:<br> ${data.fact}`});
+}catch(e) {}
+
+
